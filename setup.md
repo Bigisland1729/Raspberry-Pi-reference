@@ -6,7 +6,7 @@
 	  
   * 2017年 MacBook Pro
     
-  * macOS Monterey Version12.4
+  * macOS Monterey Version 12.4
 		
   * Raspberry Pi Imager v1.7.2
 	  
