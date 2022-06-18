@@ -60,4 +60,4 @@ https://github.com/PINTO0309/TensorflowLite-bin
 
 https://github.com/PINTO0309/Tensorflow-bin
 
-[両方インストールした後のライブラリの状態](https://github.com/Bigisland1729/Raspberry-Pi-reference/blob/main/after.txt)
+[全てインストールした後のライブラリの状態](https://github.com/Bigisland1729/Raspberry-Pi-reference/blob/main/after.txt)
