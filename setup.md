@@ -1,2 +1,2 @@
-#OSを入れる
+# OSを入れる
 Raspberry Pi ImagerでOSを入れる
