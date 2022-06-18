@@ -35,7 +35,15 @@ sudo apt install -y python3-pyqt5
 sudo apt install -y meson
 sudo pip3 install pyyaml ply
 sudo pip3 install pyopengl
+
 sudo apt-get --no-install-recommends install cmake libyaml-dev
+
+sudo apt install libcap-dev
+sudo pip install python-prctl
+sudo pip install simplejpeg
+sudo pip install piexif
+sudo pip install pidng
+
 cd
 git clone --branch picamera2 https://github.com/raspberrypi/libcamera.git
 cd libcamera
@@ -58,14 +66,7 @@ git clone https://github.com/raspberrypi/picamera2.git
 export PYTHONPATH=/home/[ユーザ名]/picamera2:/home/[ユーザ名]/libcamera/build/src/py:/home/[ユーザ名]/kmsxx/build/py:/home/[ユーザ名]/python-v4l2
 ```
 
-サンプル実行用に以下をインストール
-```
-sudo apt install libcap-dev
-sudo pip install python-prctl
-sudo pip install simplejpeg
-sudo pip install piexif
-sudo pip install pidng
-```
+# Picamera2の動作確認
 
 `touch picam2_test.py`で ~/picam2_test.pyを作成し、`nano picam2_test.py`か`vi picam2_test.py`で以下を記入
 
@@ -87,7 +88,7 @@ VNCのディスプレイ上でTerminalを起動し、以下を実行
 ```
 python picam2_test.py
 ```
-~/test.jpgという画像ファイルが生成される
+実行すると ~/test.jpgという画像ファイルが生成される
 
 # 参照
 https://github.com/raspberrypi/picamera2
