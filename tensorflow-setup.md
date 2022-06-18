@@ -50,6 +50,11 @@ OpenCVのインストール
 sudo pip install opencv-python
 ```
 
+インストールされたことの確認
+```
+python -c 'import cv2;print(cv2.__version__)'
+```
+
 # 参照
 https://github.com/PINTO0309/TensorflowLite-bin
 
