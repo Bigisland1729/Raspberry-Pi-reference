@@ -31,7 +31,7 @@ ssh [ユーザ名]@[ホスト名]
 ```
 でRaspberry PiにSSH接続する
 
-*REMOTE HOST IDENTIFICATION HAS CHANGED*の場合~/.ssh/known_hostsを編集
+*REMOTE HOST IDENTIFICATION HAS CHANGED*の場合 ~/.ssh/known_hostsを編集
 
 # 静的IP Addressを設定する
 ```
@@ -102,7 +102,7 @@ nano ~/.ssh/config
 ```
 vi ~/.ssh/config
 ```
-で以下を追記
+で ~/.ssh/configに以下を追記
 ```
 Host [設定名]
   HostName [ホスト名]
@@ -126,7 +126,7 @@ sudo /etc/ssh/sshd_config
 ```
 sudo vi /etc/ssh/sshd_config
 ```
-で以下をコメントアウトを外して編集
+で /etc/ssh/ssd_configの以下の部分をコメントアウトを外して編集
 ```
 Port [ポート番号]
 PermitRootLogin no
