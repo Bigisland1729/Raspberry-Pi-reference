@@ -2,15 +2,17 @@
   <dt>2022/6/18時点</dt>
 
   <dt>環境</dt>
-  <dd>2017年 MacBook Pro
+  <dd>
+	  
+  * 2017年 MacBook Pro
     
-  macOS Monterey Version12.4
+  * macOS Monterey Version12.4
 		
-  Raspberry Pi Imager v1.7.2
+  * Raspberry Pi Imager v1.7.2
 	  
-  Raspberry Pi 4 Model B
+  * Raspberry Pi 4 Model B
 	  
-  Raspberry Pi OS 64bit Bullseye</dd>
+  * Raspberry Pi OS 64bit Bullseye</dd>
 </dl>
   
 # OSを入れる
