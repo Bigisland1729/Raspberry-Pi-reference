@@ -1,5 +1,12 @@
-2022/6/18時点
+<dl>
+  <dt>2022/6/18時点<dt>
 
+  <dt>環境<dt>
+  <dd>2017年 MacBook Pro
+    
+  macOS Monterey Version12.4<dd>
+<dl>
+  
 # OSを入れる
 SDカードにRaspberry Pi ImagerでOSを入れる
 
@@ -25,6 +32,7 @@ vi /etc/dhcpcd.conf
 ```
 で /etc/dhcpcd.confに以下を追記
 
+```
 interface eth0
 interface wlan0
 
@@ -33,3 +41,23 @@ ssid [ネットワークのSSID]
 static ip_address=[静的IP Address]
 static routers=[ルータのIP Address]
 static domain_name_servers=[DNSのIP Address]
+```
+
+```
+cat /etc/dhcpcd.conf
+```
+で編集されたことを確認
+
+# Raspberry Piに公開鍵を転送する
+```
+ssh-keygen -t [鍵のアルゴリズム]
+```
+で鍵のペアを生成(-tはed25519を推奨)
+
+Enter file in which to save the key (/Users/[ユーザ名]/.ssh/id_[鍵のアルゴリズム]):
+
+と表示されるので生成したい鍵の名前を入力
+
+```
+ls ~/
+```
