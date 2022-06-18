@@ -1,11 +1,11 @@
 <dl>
-  <dt>2022/6/18時点<dt>
+  <dt>2022/6/18時点</dt>
 
-  <dt>環境<dt>
+  <dt>環境</dt>
   <dd>2017年 MacBook Pro
     
-  macOS Monterey Version12.4<dd>
-<dl>
+  macOS Monterey Version12.4</dd>
+</dl>
   
 # OSを入れる
 SDカードにRaspberry Pi ImagerでOSを入れる
@@ -22,7 +22,7 @@ ssh [ユーザ名]@[ホスト名]
 ```
 でRaspberry PiにSSH接続する
 
-*REMOTE HOST IDENTIFICATION HAS CHANGED*の場合~/.ssh/known_hostsを編集(Macの場合)
+*REMOTE HOST IDENTIFICATION HAS CHANGED*の場合~/.ssh/known_hostsを編集
 
 # 静的IP Addressを設定する
 ```
@@ -67,6 +67,7 @@ Enter file in which to save the key (/Users/[ユーザ名]/.ssh/id_[鍵のアル
 >Your identification has been saved in /Users/ユーザ名/.ssh/[鍵名]
 >
 >Your public key has been saved in /Users/[ユーザ名]/.ssh/[鍵名].pub
+
 の場所に生成されるので
 ```
 ls ~/.ssh | grep [鍵名]*
@@ -98,16 +99,49 @@ Host [設定名]
   HostName [ホスト名]
   User [Raspberry Piのユーザ名]
   IdentityFile /Users/[ユーザ名]/.ssh/[鍵名]
-	Port [ポート番号]
-	TCPKeepAlive yes
+  Port [ポート番号]
+  TCPKeepAlive yes
 ```
 
+そして
 ```
 ssh [設定名]
 ```
 でSSH接続できることを確認
-	
+
 # SSHの設定
 ```
-
+sudo /etc/ssh/sshd_config
 ```
+か
+```
+sudo vi /etc/ssh/sshd_config
+```
+で以下をコメントアウトを外して編集
+```
+Port [ポート番号]
+PermitRootLogin no
+PasswordAuthentication no 
+```
+<dl>
+  説明
+	<dt>Port [ポート番号]</dt>
+	<dd>SSH接続に使用するポート番号</dd>
+  <dt>PermitRootLogin no</dt>
+	<dd>rootログインを禁止</dd>
+  <dt>PasswordAuthentication no</dt>
+	<dd>パスワード認証の無効化</dd>
+</dl>
+	
+```
+sudo /etc/init.d/ssh restart
+```
+でSSHを再起動
+```
+ssh [ユーザ名]@[ホスト名]
+```
+で*Permission denied*となることを確認
+```
+ssh [設定名]
+```
+のみで接続可能
