@@ -34,14 +34,7 @@ ssh [ユーザ名]@[ホスト名]
 *REMOTE HOST IDENTIFICATION HAS CHANGED*の場合 ~/.ssh/known_hostsを編集
 
 # 静的IP Addressを設定する
-```
-nano /etc/dhcpcd.conf
-```
-か
-```
-vi /etc/dhcpcd.conf
-```
-で /etc/dhcpcd.confに以下を追記
+`nano /etc/dhcpcd.conf`か`vi /etc/dhcpcd.conf`で /etc/dhcpcd.confに以下を追記
 
 ```
 interface eth0
@@ -95,14 +88,8 @@ ssh -i ~/.ssh/[鍵名] [ユーザ名]@[ホスト名]
 で鍵でログインできることを確認
 	
 # SSHの鍵の簡略化及びポート番号とkeepaliveの設定
-```
-nano ~/.ssh/config
-```
-か
-```
-vi ~/.ssh/config
-```
-で ~/.ssh/configに以下を追記
+`nano ~/.ssh/config`か`vi ~/.ssh/config`で ~/.ssh/configに以下を追記
+
 ```
 Host [設定名]
   HostName [ホスト名]
@@ -119,14 +106,7 @@ ssh [設定名]
 でSSH接続できることを確認
 
 # SSHの設定
-```
-sudo /etc/ssh/sshd_config
-```
-か
-```
-sudo vi /etc/ssh/sshd_config
-```
-で /etc/ssh/ssd_configの以下の部分をコメントアウトを外して編集
+`sudo nano /etc/ssh/sshd_config`か`sudo vi /etc/ssh/sshd_config`で /etc/ssh/ssd_configの以下の部分をコメントアウトを外して編集
 ```
 Port [ポート番号]
 PermitRootLogin no
