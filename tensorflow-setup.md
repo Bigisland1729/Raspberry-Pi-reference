@@ -22,13 +22,13 @@ sudo pip3 install --upgrade tflite_runtime-2.9.0-cp39-none-linux_aarch64.whl
 ```
 
 インストールされたことの確認
-```
+```bash
 python -c 'import tflite_runtime as tflite;print(tflite.__version__)'
 ```
 
 # Tensorflow及びその周辺をインストール(ver 2.9.0)
 Tensorflowのインストール
-```
+```bash
 sudo apt-get install -y libhdf5-dev libc-ares-dev libeigen3-dev gcc gfortran libgfortran5 libatlas3-base libatlas-base-dev libopenblas-dev libopenblas-base libblas-dev liblapack-dev cython3 libatlas-base-dev openmpi-bin libopenmpi-dev python3-dev python-is-python3
 sudo pip3 install pip --upgrade
 sudo pip3 install keras_applications==1.0.8 --no-deps
@@ -40,18 +40,18 @@ sudo -H pip3 install tensorflow-2.9.0-cp39-none-linux_aarch64.whl
 ```
 
 インストールされたことの確認
-```
+```bash
 python -c 'import tensorflow as tf;print(tf.__version__)'
 ```
 
 # OpenCVのインストール
 OpenCVのインストール
-```
+```bash
 sudo pip install opencv-python
 ```
 
 インストールされたことの確認
-```
+```bash
 python -c 'import cv2;print(cv2.__version__)'
 ```
 
