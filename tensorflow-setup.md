@@ -44,6 +44,12 @@ sudo -H pip3 install tensorflow-2.9.0-cp39-none-linux_aarch64.whl
 python -c 'import tensorflow as tf;print(tf.__version__)'
 ```
 
+# OpenCVのインストール
+OpenCVのインストール
+```
+sudo pip install opencv-python
+```
+
 # 参照
 https://github.com/PINTO0309/TensorflowLite-bin
 
