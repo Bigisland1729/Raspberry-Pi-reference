@@ -17,7 +17,7 @@
 >`sudo raspi-config`の`legacy camera support`を***enable***に設定するとカメラモジュールが動かなくなることに注意
 
 # カメラモジュールのテスト
-VNC ViewerでIP Address、ユーザ名、パスワードを入力しRaspberry PiにVNC接続する
+VNC ViewerでRaspberry PiにVNC接続する
 
 VNCのディスプレイ上でTerminalを起動し
 ```
@@ -57,6 +57,37 @@ git clone https://github.com/raspberrypi/picamera2.git
 ```
 export PYTHONPATH=/home/[ユーザ名]/picamera2:/home/[ユーザ名]/libcamera/build/src/py:/home/[ユーザ名]/kmsxx/build/py:/home/[ユーザ名]/python-v4l2
 ```
+
+サンプル実行用に以下をインストール
+```
+sudo apt install libcap-dev
+sudo pip install python-prctl
+sudo pip install simplejpeg
+sudo pip install piexif
+sudo pip install pidng
+```
+
+`touch picam2_test.py`で ~/picam2_test.pyを作成し、`nano picam2_test.py`か`vi picam2_test.py`で以下を記入
+
+```python
+from picamera2.picamera2 import *
+import time
+
+picam2 = Picamera2()
+picam2.start_preview(Preview.QTGL)
+preview_config = picam2.preview_configuration()
+capture_config = picam2.still_configuration()
+picam2.configure(preview_config)
+
+picam2.start()
+time.sleep(5)
+picam2.switch_mode_and_capture_file(capture_config, 'test.jpg')
+```
+VNCのディスプレイ上でTerminalを起動し、以下を実行
+```
+python picam2_test.py
+```
+~/test.jpgという画像ファイルが生成される
 
 # 参照
 https://github.com/raspberrypi/picamera2
