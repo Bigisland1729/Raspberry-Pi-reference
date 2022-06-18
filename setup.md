@@ -50,14 +50,23 @@ cat /etc/dhcpcd.conf
 
 # Raspberry Piに公開鍵を転送する
 ```
+cd ~/.ssh
 ssh-keygen -t [鍵のアルゴリズム]
 ```
 で鍵のペアを生成(-tはed25519を推奨)
 
 Enter file in which to save the key (/Users/[ユーザ名]/.ssh/id_[鍵のアルゴリズム]):
 
-と表示されるので生成したい鍵の名前を入力
+と表示されるので生成したい鍵の名前を入力、入力せずEnterするとそのままの名前になる
+  
+鍵のパスフレーズを入力、必要なければそのままEnter
 
+鍵が
+>Your identification has been saved in /Users/ユーザ名/.ssh/[鍵名]
+>
+>Your public key has been saved in /Users/[ユーザ名]/.ssh/[鍵名].pub
+の場所に生成されるので
 ```
-ls ~/
+ls ~/.ssh | grep [鍵名]*
 ```
+で鍵が生成されたことを確認
