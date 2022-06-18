@@ -5,7 +5,7 @@
     
   * Python 3.9.2
     
-  * Pythonライブラリ: **[初期状態](https://github.com/Bigisland1729/Raspberry-Pi-reference/blob/main/pylib-versions.txt)**
+  * Pythonライブラリ: [初期状態](https://github.com/Bigisland1729/Raspberry-Pi-reference/blob/main/pylib-versions.txt)
   
   * Raspberry Pi 4 Model B
       
@@ -26,10 +26,6 @@ sudo pip3 install --upgrade tflite_runtime-2.9.0-cp39-none-linux_aarch64.whl
 python -c 'import tflite_runtime as tflite;print(tflite.__version__)'
 ```
 
-**参照**
-
-https://github.com/PINTO0309/TensorflowLite-bin
-
 # Tensorflow及びその周辺をインストール(ver 2.9.0)
 Tensorflowのインストール
 ```
@@ -48,6 +44,9 @@ sudo -H pip3 install tensorflow-2.9.0-cp39-none-linux_aarch64.whl
 python -c 'import tensorflow as tf;print(tf.__version__)'
 ```
 
-**参照**
+# 参照
+https://github.com/PINTO0309/TensorflowLite-bin
 
 https://github.com/PINTO0309/Tensorflow-bin
+
+[両方インストールした後のライブラリの状態](https://github.com/Bigisland1729/Raspberry-Pi-reference/blob/main/after.txt)
