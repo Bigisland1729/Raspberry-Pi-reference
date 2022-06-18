@@ -9,7 +9,9 @@
       
   * Raspberry Pi 4 Model B
       
-  * Raspberry Pi OS 64bit Bullseye</dd>
+  * Raspberry Pi OS 64bit Bullseye
+  
+  * Raspberry Pi Camera Module 2</dd>
 </dl>
 
 >**Warning**
