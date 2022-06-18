@@ -22,14 +22,14 @@
 VNC ViewerでRaspberry PiにVNC接続する
 
 VNCのディスプレイ上でTerminalを起動し
-```
+```bash
 libcamera-hello
 ```
 を実行、問題がなければカメラの映像が5秒間表示される
 
 # Picamera2のインストール
 Picamera2のインストール
-```
+```bash
 sudo apt install -y libboost-dev
 sudo apt install -y libgnutls28-dev openssl libtiff5-dev
 sudo apt install -y libfmt-dev libdrm-dev
@@ -64,7 +64,7 @@ git clone https://github.com/raspberrypi/picamera2.git
 ```
 そして
 `nano ~/.bashrc`か`vi ~/.bashrc`で~/.bashrcに以下を追記
-```
+```bash
 export PYTHONPATH=/home/[ユーザ名]/picamera2:/home/[ユーザ名]/libcamera/build/src/py:/home/[ユーザ名]/kmsxx/build/py:/home/[ユーザ名]/python-v4l2
 ```
 
@@ -87,7 +87,7 @@ time.sleep(5)
 picam2.switch_mode_and_capture_file(capture_config, 'test.jpg')
 ```
 VNCのディスプレイ上でTerminalを起動し、以下を実行
-```
+```bash
 python picam2_test.py
 ```
 実行すると ~/test.jpgという画像ファイルが生成される
