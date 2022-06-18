@@ -161,4 +161,4 @@ sudo raspi-config
 ```
 で `3 Interface Options`からVNCを有効化しRaspberry Piを再起動する
 
-VNC ViewerからIP Address、ユーザ名、パスワードを入力し、VNC接続をする
+VNC ViewerでIP Address、ユーザ名、パスワードを入力し、VNC接続をする
