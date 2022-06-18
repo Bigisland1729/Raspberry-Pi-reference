@@ -47,10 +47,7 @@ static routers=[ルータのIP Address]
 static domain_name_servers=[DNSのIP Address]
 ```
 
-```
-cat /etc/dhcpcd.conf
-```
-で編集されたことを確認
+`cat /etc/dhcpcd.conf`で編集されたことを確認
 
 # Raspberry Piに公開鍵を登録する
 ```
@@ -71,10 +68,7 @@ ssh-keygen -t [鍵のアルゴリズム]
 >Your public key has been saved in /Users/[ユーザ名]/.ssh/[鍵名].pub
 
 の場所に生成されるので
-```
-ls ~/.ssh | grep [鍵名]*
-```
-で鍵が生成されたことを確認
+`ls ~/.ssh | grep [鍵名]*`で鍵が生成されたことを確認
 
 新たにターミナルのウィンドウを立ち上げ、
 ```
