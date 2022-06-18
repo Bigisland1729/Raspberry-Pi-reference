@@ -66,7 +66,7 @@ ssh-keygen -t [鍵のアルゴリズム]
 ```
 で鍵のペアを生成(-tはed25519を推奨)
 
-Enter file in which to save the key (/Users/[ユーザ名]/.ssh/id_[鍵のアルゴリズム]):
+>Enter file in which to save the key (/Users/[ユーザ名]/.ssh/id_[鍵のアルゴリズム]):
 
 と表示されるので生成したい鍵の名前を入力、入力せずEnterするとそのままの名前になる
   
