@@ -7,6 +7,8 @@
   macOS Monterey Version12.4
 		
   Raspberry Pi Imager v1.7.2
+	  
+  Raspberry Pi 4 Model B
   Raspberry Pi OS 64bit Bullseye</dd>
 </dl>
   
