@@ -152,3 +152,11 @@ ssh [ユーザ名]@[ホスト名]
 ssh [設定名]
 ```
 のみで接続可能となる
+
+# VNCの設定
+```
+sudo raspi-config
+```
+で `3 Interface Options`からVNCを有効化しRaspberry Piを再起動する
+
+VNC ViewerからIP Address、ユーザ名、パスワードを入力し、VNC接続をする
