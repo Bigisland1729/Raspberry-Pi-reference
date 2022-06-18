@@ -21,6 +21,7 @@ SDカードにRaspberry Pi ImagerでOSを入れる
 設定しなければホスト名はraspberrypi.local
 
 終わったらSDカードをアンマウントする
+<img src=https://github.com/Bigisland1729/Raspberry-Pi-reference/blob/main/screen-shot-rpi-imager-v1.7.2.png width=500>
 
 # SSH接続をする
 ```
