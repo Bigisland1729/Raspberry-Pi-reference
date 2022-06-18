@@ -26,7 +26,7 @@ SDカードにRaspberry Pi ImagerでOSを入れる
 <img src=https://github.com/Bigisland1729/Raspberry-Pi-reference/blob/main/screen-shot-rpi-imager-v1.7.2.png width=500>
 
 # SSH接続をする
-```
+```bash
 ssh [ユーザ名]@[ホスト名]
 ```
 でRaspberry PiにSSH接続する
@@ -50,7 +50,7 @@ static domain_name_servers=[DNSのIP Address]
 `cat /etc/dhcpcd.conf`で編集されたことを確認
 
 # Raspberry Piに公開鍵を登録する
-```
+```bash
 cd ~/.ssh
 ssh-keygen -t [鍵のアルゴリズム]
 ```
@@ -71,12 +71,12 @@ ssh-keygen -t [鍵のアルゴリズム]
 `ls ~/.ssh | grep [鍵名]*`で鍵が生成されたことを確認
 
 新たにターミナルのウィンドウを立ち上げ、
-```
+```bash
 ssh-copy-id -i ~/.ssh/[鍵名].pub [ユーザ名]@[ホスト名]
 ```
 でRaspberry Piに鍵を転送、求められるパスワードはRaspberry Piのユーザのパスワードを入力
   
-```
+```bash
 ssh -i ~/.ssh/[鍵名] [ユーザ名]@[ホスト名]
 ```
 で鍵でログインできることを確認
@@ -84,7 +84,7 @@ ssh -i ~/.ssh/[鍵名] [ユーザ名]@[ホスト名]
 # SSHの鍵の簡略化及びポート番号とkeepaliveの設定
 `nano ~/.ssh/config`か`vi ~/.ssh/config`で ~/.ssh/configに以下を追記
 
-```
+```bash
 Host [設定名]
   HostName [ホスト名]
   User [Raspberry Piのユーザ名]
@@ -94,7 +94,7 @@ Host [設定名]
 ```
 
 そして
-```
+```bash
 ssh [設定名]
 ```
 でSSH接続できることを確認
@@ -116,21 +116,21 @@ PasswordAuthentication no
 	<dd>パスワード認証の無効化</dd>
 </dl>
 	
-```
+```bash
 sudo /etc/init.d/ssh restart
 ```
 でSSHを再起動
-```
+```bash
 ssh [ユーザ名]@[ホスト名]
 ```
 で*Permission denied*となることを確認
-```
+```bash
 ssh [設定名]
 ```
 のみで接続可能となる
 
 # VNCの設定
-```
+```bash
 sudo raspi-config
 ```
 で `3 Interface Options`からVNCを有効化しRaspberry Piを再起動する
