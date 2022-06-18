@@ -4,7 +4,10 @@
   <dt>環境</dt>
   <dd>2017年 MacBook Pro
     
-  macOS Monterey Version12.4</dd>
+  macOS Monterey Version12.4
+		
+  Raspberry Pi Imager v1.7.2
+  Raspberry Pi OS 64bit Bullseye</dd>
 </dl>
   
 # OSを入れる
