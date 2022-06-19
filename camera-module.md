@@ -6,7 +6,11 @@
   * 2017年 MacBook Pro
       
   * macOS Monterey Version 12.4
-      
+    
+  * Python 3.9.2
+    
+  * Pythonライブラリ: [Tensorflowインストール後](https://github.com/Bigisland1729/Raspberry-Pi-reference/blob/main/after.txt)
+
   * Raspberry Pi 4 Model B
       
   * Raspberry Pi OS 64bit Bullseye
@@ -98,3 +102,5 @@ https://github.com/raspberrypi/picamera2
 https://zenn.dev/karaage0703/articles/96013d71ab764c
 
 https://issueantenna.com/repo/raspberrypi/libcamera/issues/21
+
+[全てインストールした後のライブラリの状態](https://github.com/Bigisland1729/Raspberry-Pi-reference/blob/main/after2.txt)
