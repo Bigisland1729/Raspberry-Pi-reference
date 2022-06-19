@@ -123,11 +123,11 @@ ssh-import-id==5.10
 tensorboard==2.9.1
 tensorboard-data-server==0.6.1
 tensorboard-plugin-wit==1.8.1
-tensorflow @ file:///home/rpi/tensorflow-2.9.0-cp39-none-linux_aarch64.whl
+tensorflow @ file:///home/[ユーザ名]/tensorflow-2.9.0-cp39-none-linux_aarch64.whl
 tensorflow-estimator==2.9.0
 tensorflow-io-gcs-filesystem==0.26.0
 termcolor==1.1.0
-tflite-runtime @ file:///home/rpi/tflite_runtime-2.9.0-cp39-none-linux_aarch64.whl
+tflite-runtime @ file:///home/[ユーザ名]/tflite_runtime-2.9.0-cp39-none-linux_aarch64.whl
 thonny==3.3.14
 toml==0.10.1
 touchphat==0.0.1
